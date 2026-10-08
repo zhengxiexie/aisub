@@ -2,6 +2,8 @@
 
 # Dualsub
 
+<img src="logo.png" width="120" alt="Dualsub">
+
 **把视频和字幕文件一键变成双语字幕**
 
 拖入整季视频 → 自动读取内嵌字幕 → 翻译成中文对照 → 输出 `.srt`
