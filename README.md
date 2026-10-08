@@ -99,6 +99,7 @@ xattr -cr /Applications/Dualsub.app
 - 字幕文件也只在本机读取
 - 只有字幕**文本**会发送到你配置的 API，用于翻译
 - API Key 存储在系统钥匙串（Keychain），非明文
+- 匿名使用统计（**可关闭**）只上报计数，永不包含文件名、路径或字幕内容；数据发往你自己的服务器，不使用任何第三方分析服务
 
 ## 已知限制
 
@@ -109,6 +110,16 @@ xattr -cr /Applications/Dualsub.app
 ## 更新
 
 应用会检查新版本并提醒你。到 [Releases 页面](https://github.com/zhengxiexie/dualsub/releases/latest) 下载新版覆盖即可。
+
+## 开发者
+
+源码不公开，本仓库仅用于分发。维护者可运行：
+
+```bash
+./release.sh 1.1.0 "更新说明"     # 构建 + 发版 + 验证
+python3 Tools/stats.py             # 下载量统计
+python3 Tools/server.py            # 启动自建统计服务
+```
 
 ---
 
