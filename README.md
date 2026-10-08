@@ -10,10 +10,36 @@
 
 仅 macOS · 无广告 · 视频与字幕文件不离开本机
 
-[![Downloads](https://img.shields.io/github/downloads/zhengxiexie/dualsub/total.svg)](https://github.com/zhengxiexie/dualsub/releases)
-[![Latest](https://img.shields.io/github/v/release/zhengxiexie/dualsub.svg)](https://github.com/zhengxiexie/dualsub/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/zhengxiexie/dualsub/total.svg?style=flat&label=下载&color=6B73F2)](https://github.com/zhengxiexie/dualsub/releases)
+[![Stars](https://img.shields.io/github/stars/zhengxiexie/dualsub?style=flat&label=Star&color=6B73F2)](https://github.com/zhengxiexie/dualsub/stargazers)
+[![Forks](https://img.shields.io/github/forks/zhengxiexie/dualsub?style=flat&label=Fork&color=9E66F2)](https://github.com/zhengxiexie/dualsub/network/members)
+[![Latest](https://img.shields.io/github/v/release/zhengxiexie/dualsub?label=版本&color=6B73F2)](https://github.com/zhengxiexie/dualsub/releases/latest)
+[![macOS](https://img.shields.io/badge/macOS-14%2B-9E66F2?logo=apple&logoColor=white)](https://www.apple.com/macos/)
 
 </div>
+
+---
+
+## 关注度
+
+<p align="center">
+  <a href="https://www.star-history.com/#zhengxiexie/dualsub&type=date">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=zhengxiexie/dualsub&type=date&theme=dark" />
+      <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=zhengxiexie/dualsub&type=date" />
+      <img alt="Star History" src="https://api.star-history.com/svg?repos=zhengxiexie/dualsub&type=date" />
+    </picture>
+  </a>
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/badge?repo=zhengxiexie/dualsub&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/badge?repo=zhengxiexie/dualsub" />
+    <img alt="Stars" src="https://api.star-history.com/badge?repo=zhengxiexie/dualsub" />
+  </picture>
+  <a href="https://github.com/zhengxiexie/dualsub/stargazers">Star 趋势</a>
+</p>
 
 ---
 
@@ -99,7 +125,7 @@ xattr -cr /Applications/Dualsub.app
 - 字幕文件也只在本机读取
 - 只有字幕**文本**会发送到你配置的 API，用于翻译
 - API Key 存储在系统钥匙串（Keychain），非明文
-- 匿名使用统计（**可关闭**）只上报计数，永不包含文件名、路径或字幕内容；数据发往你自己的服务器，不使用任何第三方分析服务
+- **App 不做任何用户数据采集** —— 无遥测、无崩溃上报、无第三方分析 SDK
 
 ## 已知限制
 
@@ -117,9 +143,10 @@ xattr -cr /Applications/Dualsub.app
 
 ```bash
 ./release.sh 1.1.0 "更新说明"     # 构建 + 发版 + 验证
-python3 Tools/stats.py             # 下载量统计
-python3 Tools/server.py            # 启动自建统计服务
+python3 Tools/make_icon.py        # 重新生成应用图标
 ```
+
+关注度数据来自 GitHub 自身的计数（shields.io 与 star-history），App 不做任何用户数据采集。
 
 ---
 
