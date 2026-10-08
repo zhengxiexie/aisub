@@ -1,0 +1,26 @@
+# 本项目源码不公开: 仓库仅用于分发下载包。
+# 所有 Swift 源码、构建脚本与测试都留在本地, 不纳入版本控制。
+Sources/
+Package.swift
+Package.resolved
+.swiftpm/
+build/
+.build/
+*.xcodeproj
+*.xcworkspace
+Dualsub.app/
+dist/
+build-icon/
+Tools/
+Info.plist
+build-app.sh
+build-release.sh
+verify_*.swift
+ROADMAP.md
+Resources/
+
+# 仅保留给 README 用的方形图标
+!logo.png
+
+# macOS
+.DS_Store
