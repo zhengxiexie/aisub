@@ -17,6 +17,8 @@ Tools/
 Info.plist
 build-app.sh
 build-release.sh
+publish.sh
+upload_assets.sh
 verify_*.swift
 ROADMAP.md
 release.sh
