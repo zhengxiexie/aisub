@@ -17,6 +17,7 @@ build-app.sh
 build-release.sh
 verify_*.swift
 ROADMAP.md
+release.sh
 Resources/
 
 # 仅保留给 README 用的方形图标
