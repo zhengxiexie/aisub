@@ -8,6 +8,8 @@ build/
 .build/
 *.xcodeproj
 *.xcworkspace
+AISub.app/
+# 改名前的旧构建产物
 Dualsub.app/
 dist/
 build-icon/
