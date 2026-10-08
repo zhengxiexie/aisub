@@ -23,22 +23,13 @@
 ## 关注度
 
 <p align="center">
-  <a href="https://www.star-history.com/#zhengxiexie/dualsub&type=date">
+  <a href="https://www.star-history.com/#zhengxiexie/dualsub&type=Date">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=zhengxiexie/dualsub&type=date&theme=dark" />
       <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=zhengxiexie/dualsub&type=date" />
-      <img alt="Star History" src="https://api.star-history.com/svg?repos=zhengxiexie/dualsub&type=date" />
+      <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=zhengxiexie/dualsub&type=date" />
     </picture>
   </a>
-</p>
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/badge?repo=zhengxiexie/dualsub&theme=dark" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/badge?repo=zhengxiexie/dualsub" />
-    <img alt="Stars" src="https://api.star-history.com/badge?repo=zhengxiexie/dualsub" />
-  </picture>
-  <a href="https://github.com/zhengxiexie/dualsub/stargazers">Star 趋势</a>
 </p>
 
 ---
