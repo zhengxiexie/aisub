@@ -119,6 +119,10 @@ Reproductor integrado con subtítulos bilingües superpuestos. Al abrir una tare
 subtítulos aparecen en vivo sobre el vídeo a medida que se traducen. No hace falta exportar
 ni abrir otro reproductor.
 
+Los archivos MKV se remuxan al vuelo a un MP4 en caché (copia de flujo: sin pérdida de
+calidad y sin recodificar, unos dos segundos por episodio en 1080p). Este paso requiere
+[ffmpeg](#requisitos); los MP4/MOV se reproducen sin él.
+
 **Configurar una temporada entera de una vez**
 
 Ajustes por serie para idiomas, orden de subtítulos y glosario. Veinte episodios ya no
@@ -216,6 +220,25 @@ panel de Ajustes tiene un botón «Probar conexión», así que sabes de inmedia
 - La clave de API se guarda en el Llavero del sistema, no en texto plano
 - **La app no recopila ningún dato del usuario**: sin telemetría, sin informes de fallos y sin
 SDK de analítica de terceros
+
+## Requisitos
+
+ffmpeg es opcional para la traducción en sí, pero necesario para algunas funciones:
+
+| Función | ¿Necesita ffmpeg? |
+|---|---|
+| Extraer subtítulos de texto MKV/WebM | No — analizador integrado |
+| Archivos de subtítulos externos (`.srt` / `.ass`) | No |
+| Extraer subtítulos de MP4/MOV | Sí |
+| Reproducir MKV en el reproductor integrado | Sí (remux a MP4) |
+| Volver a incrustar los subtítulos en el vídeo | Sí |
+
+```bash
+brew install ffmpeg
+```
+
+AISub lo encuentra automáticamente en el `PATH`; también puedes indicar una ruta concreta en
+Ajustes → Avanzado.
 
 ## Limitaciones conocidas
 

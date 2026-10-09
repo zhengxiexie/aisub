@@ -133,6 +133,10 @@ asking.
 A built-in player with bilingual overlay — open any job and the subtitles appear live over
 the video as they come in. No need to export first and open a separate player.
 
+MKV files are remuxed to a cached MP4 on the fly (a stream copy, so no quality loss and no
+re-encoding — about two seconds for a 1080p episode). This step needs [ffmpeg](#requirements);
+MP4/MOV play directly without it.
+
 **Configure a whole season at once**
 
 Series-level settings for languages, subtitle order and glossary. Twenty episodes no longer
@@ -204,6 +208,25 @@ has a "Test Connection" button, so you know immediately whether it's right.
 > work with — the original text has to be recognized via OCR before it can be translated. But
 > as long as the file carries one text track (even English, even French), AISub can use that as
 > the source script.
+
+## Requirements
+
+ffmpeg is optional for translation but needed for a few features:
+
+| Feature | Needs ffmpeg? |
+|---|---|
+| MKV/WebM text subtitle extraction | No — built-in parser |
+| Sidecar subtitle files (`.srt` / `.ass`) | No |
+| MP4/MOV subtitle extraction | Yes |
+| Playing MKV in the built-in player | Yes (remuxed to MP4) |
+| Embedding subtitles back into a video | Yes |
+
+```bash
+brew install ffmpeg
+```
+
+AISub finds it on `PATH` automatically, or you can point at a specific path in
+Settings → Advanced.
 
 ## Privacy
 

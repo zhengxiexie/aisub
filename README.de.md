@@ -122,6 +122,10 @@ Eingebauter Player mit zweisprachiger Untertitel-Überlagerung. Beim Öffnen ein
 erscheinen die Untertitel live über dem Video, während sie übersetzt werden. Kein Export,
 kein externer Player.
 
+MKV-Dateien werden beim Abspielen automatisch in ein gecachtes MP4 umgepackt (Stream-Kopie —
+kein Qualitätsverlust, keine Neukodierung, etwa zwei Sekunden pro 1080p-Folge). Dieser Schritt
+braucht [ffmpeg](#voraussetzungen); MP4/MOV laufen ohne.
+
 **Eine ganze Staffel auf einmal konfigurieren**
 
 Serien-Einstellungen für Sprachen, Untertitelreihenfolge und Glossar. Zwanzig Episoden
@@ -220,6 +224,25 @@ stimmt.
 - Der API-Schlüssel liegt im System-Schlüsselbund, nicht im Klartext
 - **Die App sammelt keine Nutzerdaten** — kein Telemetrie, kein Crash-Reporting, kein
 Drittanbieter-Analytics-SDK
+
+## Voraussetzungen
+
+ffmpeg ist für die Übersetzung selbst optional, aber für einige Funktionen nötig:
+
+| Funktion | ffmpeg nötig? |
+|---|---|
+| MKV/WebM-Textuntertitel extrahieren | Nein — eingebauter Parser |
+| Externe Untertiteldateien (`.srt` / `.ass`) | Nein |
+| MP4/MOV-Untertitel extrahieren | Ja |
+| MKV im eingebauten Player abspielen | Ja (Remux zu MP4) |
+| Untertitel zurück ins Video einbetten | Ja |
+
+```bash
+brew install ffmpeg
+```
+
+AISub findet es automatisch über `PATH`; ein eigener Pfad lässt sich unter
+Einstellungen → Erweitert setzen.
 
 ## Bekannte Einschränkungen
 

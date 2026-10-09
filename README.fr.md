@@ -123,6 +123,10 @@ Lecteur intégré avec incrustation bilingue. En ouvrant une tâche, les sous-ti
 apparaissent en direct sur la vidéo au fur et à mesure. Pas besoin d'exporter puis
 d'ouvrir un lecteur externe.
 
+Les fichiers MKV sont remuxés à la volée vers un MP4 mis en cache (copie de flux — aucune
+perte de qualité, aucun réencodage, environ deux secondes par épisode 1080p). Cette étape
+nécessite [ffmpeg](#prérequis) ; les MP4/MOV se lisent sans.
+
 **Configurer une saison entière d'un coup**
 
 Réglages par série pour les langues, l'ordre des sous-titres et le glossaire. Vingt
@@ -221,6 +225,25 @@ immédiatement si c'est correct.
 - La clé API est stockée dans le Trousseau système, en clair nul
 - **L'application ne collecte aucune donnée utilisateur** — ni télémétrie, ni rapport d'incident,
 ni SDK d'analyse tiers
+
+## Prérequis
+
+ffmpeg est optionnel pour la traduction elle-même, mais nécessaire pour certaines fonctions :
+
+| Fonction | ffmpeg requis ? |
+|---|---|
+| Extraction des sous-titres texte MKV/WebM | Non — analyseur intégré |
+| Fichiers de sous-titres externes (`.srt` / `.ass`) | Non |
+| Extraction des sous-titres MP4/MOV | Oui |
+| Lecture de MKV dans le lecteur intégré | Oui (remux vers MP4) |
+| Réinsertion des sous-titres dans la vidéo | Oui |
+
+```bash
+brew install ffmpeg
+```
+
+AISub le trouve automatiquement via le `PATH` ; un chemin précis peut être défini dans
+Réglages → Avancé.
 
 ## Limites connues
 
