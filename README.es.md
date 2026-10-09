@@ -113,6 +113,23 @@ Un reintento traduce solo las entradas que faltan, no el lote entero. Si de cuar
 falla una, se reenvía esa única línea. La fila indica cuántas entradas siguen sin traducir, y
 el reintento sobrescribe la salida parcial anterior sin preguntar nada.
 
+**Ver mientras se traduce**
+
+Reproductor integrado con subtítulos bilingües superpuestos. Al abrir una tarea, los
+subtítulos aparecen en vivo sobre el vídeo a medida que se traducen. No hace falta exportar
+ni abrir otro reproductor.
+
+**Configurar una temporada entera de una vez**
+
+Ajustes por serie para idiomas, orden de subtítulos y glosario. Veinte episodios ya no
+significan veinte visitas al panel global.
+
+**Exportación ASS con firma discreta**
+
+Exporta a ASS con subtítulos bilingües estilizados. Si compartes el archivo, una firma de
+500 ms de AISub aparece en una esquina para que otros descubran la herramienta — se puede
+desactivar en los ajustes.
+
 **Los subtítulos externos funcionan por sí solos**
 
 Arrastra un `.srt` / `.ass` / `.ssa` / `.vtt`: no hace falta ningún archivo de vídeo.

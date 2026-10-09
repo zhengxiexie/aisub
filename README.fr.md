@@ -117,6 +117,23 @@ lignes, si une seule échoue, c'est cette seule ligne qui est renvoyée. La lign
 combien d'entrées restent non traduites, et la reprise écrase la sortie partielle précédente
 sans rien demander.
 
+**Regarder pendant la traduction**
+
+Lecteur intégré avec incrustation bilingue. En ouvrant une tâche, les sous-titres
+apparaissent en direct sur la vidéo au fur et à mesure. Pas besoin d'exporter puis
+d'ouvrir un lecteur externe.
+
+**Configurer une saison entière d'un coup**
+
+Réglages par série pour les langues, l'ordre des sous-titres et le glossaire. Vingt
+épisodes ne demandent plus vingt allers-retours dans les réglages globaux.
+
+**Export ASS avec signature discrète**
+
+Export en ASS avec sous-titres bilingues stylisés. Si vous partagez le fichier, une
+signature AISub de 500 ms apparaît dans un coin pour que d'autres puissent découvrir
+l'outil — désactivable dans les réglages.
+
 **Les sous-titres externes fonctionnent seuls**
 
 Glissez un `.srt` / `.ass` / `.ssa` / `.vtt` — aucun fichier vidéo requis.

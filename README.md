@@ -128,6 +128,21 @@ line out of forty fails, one line is resent, not forty. The row tells you how ma
 remain untranslated, and pressing retry overwrites the previous partial output without
 asking.
 
+**Watch while it translates**
+
+A built-in player with bilingual overlay — open any job and the subtitles appear live over
+the video as they come in. No need to export first and open a separate player.
+
+**Configure a whole season at once**
+
+Series-level settings for languages, subtitle order and glossary. Twenty episodes no longer
+mean twenty trips to the global settings panel.
+
+**ASS output with a tasteful signature**
+
+Export to ASS with styled bilingual subtitles. If you share the file, a 500 ms AISub
+signature in the corner lets others find the tool — opt-out in Settings.
+
 **Steadier batch translation**
 
 Glossary locks in terminology for proper nouns, context carries across batches, 3-way batch

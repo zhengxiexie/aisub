@@ -116,6 +116,23 @@ eine von vierzig Zeilen scheitert, wird diese eine Zeile gesendet, nicht vierzig
 zeigt an, wie viele Einträge unübersetzt bleiben, und „Wiederholen" überschreibt die
 vorherige Teilausgabe, ohne nachzufragen.
 
+**Zuschauen beim Übersetzen**
+
+Eingebauter Player mit zweisprachiger Untertitel-Überlagerung. Beim Öffnen einer Aufgabe
+erscheinen die Untertitel live über dem Video, während sie übersetzt werden. Kein Export,
+kein externer Player.
+
+**Eine ganze Staffel auf einmal konfigurieren**
+
+Serien-Einstellungen für Sprachen, Untertitelreihenfolge und Glossar. Zwanzig Episoden
+bedeuten nicht mehr zwanzig Besuche in den globalen Einstellungen.
+
+**ASS-Export mit dezenter Signatur**
+
+Export als ASS mit stilisierten zweisprachigen Untertiteln. Wird die Datei geteilt, erscheint
+eine 500-ms-Signatur in der Ecke, damit andere AISub entdecken können — in den Einstellungen
+abschaltbar.
+
 **Externe Untertitel funktionieren für sich allein**
 
 Zieh `.srt` / `.ass` / `.ssa` / `.vtt` rein — keine Videodatei nötig.
