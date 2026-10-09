@@ -144,8 +144,8 @@ mean twenty trips to the global settings panel.
 
 **ASS output with a tasteful signature**
 
-Export to ASS with styled bilingual subtitles. If you share the file, a 500 ms AISub
-signature in the corner lets others find the tool — opt-out in Settings.
+Export to ASS with styled bilingual subtitles. If you share the file, a 5-second AISub
+signature at the start and end lets others find the tool — opt-out in Settings.
 
 **Steadier batch translation**
 

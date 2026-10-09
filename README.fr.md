@@ -135,7 +135,7 @@ Réglages par série pour les langues, l'ordre des sous-titres et le glossaire. 
 **Export ASS avec signature discrète**
 
 Export en ASS avec sous-titres bilingues stylisés. Si vous partagez le fichier, une
-signature AISub de 500 ms apparaît dans un coin pour que d'autres puissent découvrir
+signature AISub de 5 secondes apparaît au début et à la fin pour que d'autres puissent découvrir
 l'outil — désactivable dans les réglages.
 
 **Les sous-titres externes fonctionnent seuls**

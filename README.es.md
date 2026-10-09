@@ -131,7 +131,7 @@ significan veinte visitas al panel global.
 **Exportación ASS con firma discreta**
 
 Exporta a ASS con subtítulos bilingües estilizados. Si compartes el archivo, una firma de
-500 ms de AISub aparece en una esquina para que otros descubran la herramienta — se puede
+5 segundos de AISub aparece al principio y al final para que otros descubran la herramienta — se puede
 desactivar en los ajustes.
 
 **Los subtítulos externos funcionan por sí solos**

@@ -134,7 +134,7 @@ bedeuten nicht mehr zwanzig Besuche in den globalen Einstellungen.
 **ASS-Export mit dezenter Signatur**
 
 Export als ASS mit stilisierten zweisprachigen Untertiteln. Wird die Datei geteilt, erscheint
-eine 500-ms-Signatur in der Ecke, damit andere AISub entdecken können — in den Einstellungen
+eine 5-Sekunden-Signatur am Anfang und Ende, damit andere AISub entdecken können — in den Einstellungen
 abschaltbar.
 
 **Externe Untertitel funktionieren für sich allein**
