@@ -103,6 +103,13 @@ Déposez un dossier. Les noms d'épisodes comme `S01E02` / `第2集` / `E02` son
 automatiquement, la progression est regroupée par série, et toute une saison peut être
 annulée d'un clic.
 
+**Opérations groupées sur toute une saison**
+
+Sélectionnez plusieurs tâches — clic, ⌘-clic pour en ajouter, ou le bouton de sélection sur
+l'en-tête de série — puis relancez, annulez ou supprimez-les toutes en une seule action, via
+la barre ou le menu contextuel. Nettoyer une saison de 20 épisodes ne demande plus vingt
+clics.
+
 **Les sous-titres externes fonctionnent seuls**
 
 Glissez un `.srt` / `.ass` / `.ssa` / `.vtt` — aucun fichier vidéo requis.

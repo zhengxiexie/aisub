@@ -102,6 +102,13 @@ Zieh einen Ordner rein. Episodennamen wie `S01E02` / `第2集` / `E02` werden au
 erkannt, der Fortschritt nach Serie gruppiert, und eine ganze Staffel lässt sich auf einmal
 abbrechen.
 
+**Stapeloperationen für ganze Staffeln**
+
+Mehrere Aufgaben auswählen — Klick, ⌘-Klick zum Hinzufügen, oder „Ganze Serie auswählen"
+in der Serienleiste — und alle auf einmal erneut übersetzen, abbrechen oder löschen, über die
+Leiste oder das Rechtsklick-Menü. Eine 20-teilige Staffel muss nicht mehr mit zwanzig
+Klicks abgearbeitet werden.
+
 **Externe Untertitel funktionieren für sich allein**
 
 Zieh `.srt` / `.ass` / `.ssa` / `.vtt` rein — keine Videodatei nötig.

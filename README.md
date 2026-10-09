@@ -101,6 +101,12 @@ to the French track just because that one happens to have the most entries.
 Drop a folder. Episode names like `S01E02` / `第2集` / `E02` are detected automatically,
 progress is grouped by series, and an entire season can be cancelled at once.
 
+**Batch operations on a whole season at once**
+
+Select multiple tasks — click, ⌘-click to add, or hit select-all on a series header — then
+retry, cancel, or delete them all in one action, from the toolbar or the right-click menu.
+Ticking off a 20-episode season no longer means twenty separate clicks.
+
 **Sidecar subtitles work on their own**
 
 Drag in `.srt` / `.ass` / `.ssa` / `.vtt` — no video file required.

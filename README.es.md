@@ -101,6 +101,12 @@ Arrastra una carpeta. Los nombres de episodio como `S01E02` / `第2集` / `E02` 
 automáticamente, el progreso se agrupa por serie y puedes cancelar una temporada entera de una
 vez.
 
+**Operaciones por lotes en una temporada entera**
+
+Selecciona varias tareas: clic, ⌘-clic para añadir, o el botón de selección en la cabecera de
+la serie. Luego reintenta, cancela o bórralas todas de una vez, desde la barra o el menú
+contextual. Limpiar una temporada de 20 episodios ya no son veinte clics.
+
 **Los subtítulos externos funcionan por sí solos**
 
 Arrastra un `.srt` / `.ass` / `.ssa` / `.vtt`: no hace falta ningún archivo de vídeo.
