@@ -107,6 +107,12 @@ Selecciona varias tareas: clic, ⌘-clic para añadir, o el botón de selección
 la serie. Luego reintenta, cancela o bórralas todas de una vez, desde la barra o el menú
 contextual. Limpiar una temporada de 20 episodios ya no son veinte clics.
 
+**Reintentar solo cuesta lo que falló**
+
+Un reintento traduce solo las entradas que faltan, no el lote entero. Si de cuarenta líneas
+falla una, se reenvía esa única línea. La fila indica cuántas entradas siguen sin traducir, y
+el reintento sobrescribe la salida parcial anterior sin preguntar nada.
+
 **Los subtítulos externos funcionan por sí solos**
 
 Arrastra un `.srt` / `.ass` / `.ssa` / `.vtt`: no hace falta ningún archivo de vídeo.

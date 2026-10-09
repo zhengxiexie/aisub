@@ -110,6 +110,13 @@ l'en-tête de série — puis relancez, annulez ou supprimez-les toutes en une s
 la barre ou le menu contextuel. Nettoyer une saison de 20 épisodes ne demande plus vingt
 clics.
 
+**Une reprise ne coûte que ce qui a échoué**
+
+Une reprise ne traduit que les entrées encore manquantes — pas le lot entier. Sur quarante
+lignes, si une seule échoue, c'est cette seule ligne qui est renvoyée. La ligne indique
+combien d'entrées restent non traduites, et la reprise écrase la sortie partielle précédente
+sans rien demander.
+
 **Les sous-titres externes fonctionnent seuls**
 
 Glissez un `.srt` / `.ass` / `.ssa` / `.vtt` — aucun fichier vidéo requis.

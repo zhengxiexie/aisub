@@ -121,6 +121,13 @@ and only the untranslated parts are filled in, so repeated runs don't degrade th
 Resumable checkpoints, cancel any time (responds within a second), failed batches retried
 automatically with finished work preserved.
 
+**Retrying costs only what failed**
+
+A retry translates just the entries that are still missing — not the whole batch. When one
+line out of forty fails, one line is resent, not forty. The row tells you how many entries
+remain untranslated, and pressing retry overwrites the previous partial output without
+asking.
+
 **Steadier batch translation**
 
 Glossary locks in terminology for proper nouns, context carries across batches, 3-way batch

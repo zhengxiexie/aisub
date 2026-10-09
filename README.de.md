@@ -109,6 +109,13 @@ in der Serienleiste — und alle auf einmal erneut übersetzen, abbrechen oder l
 Leiste oder das Rechtsklick-Menü. Eine 20-teilige Staffel muss nicht mehr mit zwanzig
 Klicks abgearbeitet werden.
 
+**Wiederholen kostet nur das, was fehlschlug**
+
+Eine Wiederholung übersetzt nur die Einträge, die noch fehlen — nicht die ganze Charge. Wenn
+eine von vierzig Zeilen scheitert, wird diese eine Zeile gesendet, nicht vierzig. Die Zeile
+zeigt an, wie viele Einträge unübersetzt bleiben, und „Wiederholen" überschreibt die
+vorherige Teilausgabe, ohne nachzufragen.
+
 **Externe Untertitel funktionieren für sich allein**
 
 Zieh `.srt` / `.ass` / `.ssa` / `.vtt` rein — keine Videodatei nötig.
