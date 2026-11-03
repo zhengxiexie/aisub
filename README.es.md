@@ -260,7 +260,7 @@ El código fuente no es público; este repositorio es solo para distribución. E
 puede ejecutar:
 
 ```bash
-./release.sh 2.0.0 "Notas de la versión"   # compilar + publicar + verificar
+./release.sh 2.3.3 notas.md                # compilar + publicar + verificar (la versión debe coincidir con Info.plist)
 python3 Tools/make_icon.py                 # regenerar el icono de la app
 ```
 

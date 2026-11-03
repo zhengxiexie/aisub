@@ -17,11 +17,10 @@ Tools/
 Info.plist
 build-app.sh
 build-release.sh
-publish.sh
-upload_assets.sh
-verify_*.swift
-ROADMAP.md
 release.sh
+src-git.sh
+Tests/
+ROADMAP.md
 Resources/
 
 # 仅保留给 README 用的方形图标

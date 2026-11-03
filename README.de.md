@@ -265,7 +265,7 @@ Der Quellcode ist nicht öffentlich; dieses Repository dient nur zur Verteilung.
 Maintainer kann Folgendes ausführen:
 
 ```bash
-./release.sh 2.0.0 "Release Notes"      # Build + Veröffentlichung + Verifikation
+./release.sh 2.3.3 notes.md            # Build + Veröffentlichung + Verifikation (Version muss Info.plist entsprechen)
 python3 Tools/make_icon.py             # App-Symbol neu erzeugen
 ```
 

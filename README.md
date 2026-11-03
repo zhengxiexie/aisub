@@ -201,13 +201,33 @@ has a "Test Connection" button, so you know immediately whether it's right.
 | MKV / WebM text subtitles (SRT/ASS) | ✅ Built-in parser, no ffmpeg needed |
 | Sidecar `.srt` / `.ass` / `.ssa` / `.vtt` | ✅ Read directly |
 | MP4 / MOV / AVI text subtitles | ✅ Falls back to ffmpeg |
-| PGS / VobSub image subtitles | ❌ Bitmaps need OCR, unsupported |
-| Blu-ray ISO images | ❌ Same reason (PGS-only); try another source |
+| PGS / VobSub image subtitles | ⚠️ Bitmaps need OCR; switch the source to speech recognition |
+| Blu-ray ISO images | ⚠️ Same as MP4 for text tracks; speech recognition when PGS-only |
 
-> **Note**: if your release only has image subtitles (PGS), there genuinely is no subtitle to
-> work with — the original text has to be recognized via OCR before it can be translated. But
-> as long as the file carries one text track (even English, even French), AISub can use that as
-> the source script.
+> **Where the original text comes from is decided automatically:**
+>
+> 1. The embedded text subtitle track wins — fastest, and nothing leaves your Mac.
+> 2. If there is none, AISub asks whether to transcribe the audio instead. Only after you
+>    agree is the audio uploaded to a free third-party recognition service. Decline and the
+>    job just fails, exactly as before.
+>
+> It asks at most once per launch, so a batch of episodes only prompts once.
+>
+> **Resumable**: the extracted audio, the split parts and each part's result are cached
+> locally. Retrying after a failure or a cancel reuses them instead of re-extracting the
+> audio or re-uploading finished parts. The cache is removed once the whole job succeeds.
+
+## Speech recognition engines
+
+Pick one in Settings → Speech Recognition. The free Bilibili engine is the default:
+
+| Engine | Key needed | Audio goes to | Languages |
+|---|---|---|---|
+| Bilibili | No | Bilibili | Chinese / English |
+| Jianying | No | ByteDance (relies on a third-party signing service that can vanish) | Chinese / English |
+| Whisper API | Your own | The OpenAI-compatible endpoint you configure | Any |
+| Deepgram | Your own (signup gives $200, about 775 hours) | Deepgram | Any |
+| Whisper.cpp | No | **Stays on your Mac** | Any (`brew install whisper-cpp`; the model downloads on first use) |
 
 ## Requirements
 
@@ -225,21 +245,27 @@ ffmpeg is optional for translation but needed for a few features:
 brew install ffmpeg
 ```
 
-AISub finds it on `PATH` automatically, or you can point at a specific path in
-Settings → Advanced.
+**You do not have to install it yourself.** The first time ffmpeg is genuinely needed (say
+you drop an MP4), AISub asks whether to download it; on confirm it fetches static builds into
+`~/Library/Application Support/com.zhengxie.aisub/bin/` — no Homebrew, no sudo. If you prefer,
+`brew install ffmpeg` works too: AISub finds it on `PATH`, or you can point at a specific path
+in Settings → Advanced.
 
 ## Privacy
 
 - Video files **never** leave your Mac — parsing happens locally
 - Subtitle files are read locally as well
 - Only subtitle **text** is sent to the API you configured, for translation
+- **Only when you turn on Speech recognition** is the audio track uploaded to a third-party
+  recognition service; it is off by default
 - The API key is stored in the system Keychain, not in plaintext
 - **The app collects no user data** — no telemetry, no crash reporting, no third-party
   analytics SDK
 
 ## Known Limitations
 
-- PGS image subtitles require OCR and are not supported yet
+- PGS image subtitles still cannot be OCR'd; use Speech recognition when you need the original text
+- Speech recognition currently supports Chinese and English only (limit of the free service)
 - Translation quality depends on the model you use
 - No manual subtitle-track picker yet (the best track is chosen automatically)
 
@@ -256,7 +282,7 @@ The app checks for new versions and notifies you. Download the new version from 
 Source code is not public; this repository is for distribution only. The maintainer can run:
 
 ```bash
-./release.sh 2.0.0 "Release notes"     # build + publish + verify
+./release.sh 2.3.3 notes.md            # build + publish + verify (version must match Info.plist)
 python3 Tools/make_icon.py             # regenerate the app icon
 ```
 

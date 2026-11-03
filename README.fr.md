@@ -267,7 +267,7 @@ Le code source n'est pas public ; ce dépôt sert uniquement à la distribution.
 peut exécuter :
 
 ```bash
-./release.sh 2.0.0 "Notes de version"   # build + publication + vérification
+./release.sh 2.3.3 notes.md            # build + publication + vérification (la version doit correspondre à Info.plist)
 python3 Tools/make_icon.py             # régénérer l'icône de l'app
 ```
 

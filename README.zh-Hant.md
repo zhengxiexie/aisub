@@ -226,7 +226,7 @@ AISub 會自動從 `PATH` 找，也可以在 設定 → 進階 裡指定路徑�
 原始碼不公開，本儲存庫僅用於散布。維護者可執行：
 
 ```bash
-./release.sh 2.0.0 "更新說明"     # 建置 + 發版 + 驗證
+./release.sh 2.3.3 notes.md      # 建置 + 發版 + 驗證(版本號須與 Info.plist 一致)
 python3 Tools/make_icon.py        # 重新產生應用程式圖示
 ```
 
