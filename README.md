@@ -90,6 +90,20 @@ A hand-written Matroska parser jumps straight to the Cues index at the end of th
 skipping 99% of the video payload. An 83 GB 4K remux goes from open-to-subtitles in
 **142 minutes → 19 seconds**.
 
+**Bitmap subtitles (PGS) become text**
+
+Plenty of Blu-ray remuxes carry picture subtitles only — no text track at all, and no
+matching `.srt` anywhere online. AISub decodes those PGS frames and reads them with OCR
+that runs entirely on your Mac, so the film translates like any other. No extra tools to
+install, nothing uploaded. Toggle in Settings → Subtitle extraction.
+
+**Extraction is never wasted**
+
+Pulling the picture subtitles out of a remux means streaming the whole file once — minutes
+on a network drive. Both the extracted stream and the OCR result are cached, so a retry
+after a failed translation goes straight to translating. Caches are cleared when the job
+succeeds and pruned after a week.
+
 **Picks the right track on multilingual releases**
 
 Some releases pack 30+ languages into one file. AISub prefers the English track; and even
@@ -201,8 +215,8 @@ has a "Test Connection" button, so you know immediately whether it's right.
 | MKV / WebM text subtitles (SRT/ASS) | ✅ Built-in parser, no ffmpeg needed |
 | Sidecar `.srt` / `.ass` / `.ssa` / `.vtt` | ✅ Read directly |
 | MP4 / MOV / AVI text subtitles | ✅ Falls back to ffmpeg |
-| PGS / VobSub image subtitles | ⚠️ Bitmaps need OCR; switch the source to speech recognition |
-| Blu-ray ISO images | ⚠️ Same as MP4 for text tracks; speech recognition when PGS-only |
+| PGS / VobSub image subtitles | ✅ Decoded and OCR'd on-device (toggle in Settings) |
+| Blu-ray ISO images | ✅ Text tracks as with MP4; PGS-only titles via on-device OCR |
 
 > **Where the original text comes from is decided automatically:**
 >
@@ -264,7 +278,7 @@ in Settings → Advanced.
 
 ## Known Limitations
 
-- PGS image subtitles still cannot be OCR'd; use Speech recognition when you need the original text
+- On-device OCR covers Latin-script and CJK PGS tracks; unusual fonts or heavily styled subtitles may need a pass of manual proofreading
 - Speech recognition currently supports Chinese and English only (limit of the free service)
 - Translation quality depends on the model you use
 - No manual subtitle-track picker yet (the best track is chosen automatically)

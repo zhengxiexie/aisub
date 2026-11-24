@@ -209,13 +209,12 @@ immédiatement si c'est correct.
 | Sous-titres texte MKV / WebM (SRT/ASS) | ✅ Analyseur intégré, pas besoin de ffmpeg |
 | `.srt` / `.ass` / `.ssa` / `.vtt` externes | ✅ Lecture directe |
 | Sous-titres texte MP4 / MOV / AVI | ✅ Repli sur ffmpeg |
-| Sous-titres image PGS / VobSub | ❌ Les bitmaps exigent de l'OCR, non pris en charge |
-| Images ISO Blu-ray | ❌ Même raison (PGS uniquement) ; essayez une autre source |
+| Sous-titres image PGS / VobSub | ✅ Décodés et lus par OCR en local (désactivable dans les réglages) |
+| Images ISO Blu-ray | ✅ Pistes texte comme le MP4 ; OCR local si PGS uniquement |
 
-> **Remarque** : si votre édition ne contient que des sous-titres image (PGS), il n'y a
-> effectivement aucun sous-titre exploitable — le texte original doit d'abord être reconnu par
-> OCR avant d'être traduit. Mais tant que le fichier contient une piste texte (même anglaise,
-> même française), AISub peut l'utiliser comme scénario source.
+> **Remarque** : si votre édition ne contient que des sous-titres image (PGS), AISub les
+> reconnaît en local par OCR avant de les traduire. Ni la vidéo ni le texte ne quittent
+> votre Mac. Une piste texte reste préférée quand elle existe (plus rapide, plus fidèle).
 
 ## Confidentialité
 
@@ -247,7 +246,7 @@ Réglages → Avancé.
 
 ## Limites connues
 
-- Les sous-titres image PGS nécessitent de l'OCR et ne sont pas encore pris en charge
+- L'OCR local couvre les PGS en alphabet latin et en CJK ; les polices inhabituelles ou les sous-titres très stylisés peuvent demander une relecture manuelle
 - La qualité de la traduction dépend du modèle utilisé
 - Pas encore de sélecteur manuel de piste de sous-titres (la meilleure piste est choisie automatiquement)
 

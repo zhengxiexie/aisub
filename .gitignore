@@ -28,3 +28,6 @@ Resources/
 
 # macOS
 .DS_Store
+
+# 本地工具的记忆索引, 不随仓库分发
+.memsearch/

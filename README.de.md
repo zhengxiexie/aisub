@@ -208,13 +208,12 @@ stimmt.
 | MKV / WebM Text-Untertitel (SRT/ASS) | ✅ Eingebauter Parser, kein ffmpeg nötig |
 | Externe `.srt` / `.ass` / `.ssa` / `.vtt` | ✅ Direkt gelesen |
 | MP4 / MOV / AVI Text-Untertitel | ✅ Rückfall auf ffmpeg |
-| PGS / VobSub Bild-Untertitel | ❌ Bitmaps brauchen OCR, nicht unterstützt |
-| Blu-ray ISO-Images | ❌ Aus demselben Grund (nur PGS); probiere eine andere Quelle |
+| PGS / VobSub Bild-Untertitel | ✅ Lokal dekodiert und per OCR gelesen (in den Einstellungen abschaltbar) |
+| Blu-ray ISO-Images | ✅ Textspuren wie bei MP4; nur PGS → lokales OCR |
 
-> **Hinweis**: Wenn dein Release nur Bild-Untertitel (PGS) hat, gibt es tatsächlich keine
-> verwendbaren Untertitel — der Originaltext muss erst per OCR erkannt werden, bevor er
-> übersetzt werden kann. Sobald die Datei aber eine Textspur hat (auch Englisch, auch
-> Französisch), kann AISub sie als Originalskript verwenden.
+> **Hinweis**: Hat dein Release nur Bild-Untertitel (PGS), erkennt AISub sie lokal per OCR
+> und übersetzt erst dann. Weder Video noch Text verlassen deinen Mac.
+> Eine Textspur wird weiterhin bevorzugt (schneller und genauer).
 
 ## Datenschutz
 
@@ -246,7 +245,7 @@ Einstellungen → Erweitert setzen.
 
 ## Bekannte Einschränkungen
 
-- PGS-Bild-Untertitel benötigen OCR und werden noch nicht unterstützt
+- Lokales OCR deckt PGS in lateinischer Schrift und CJK ab; ungewöhnliche Schriften oder stark gestylte Untertitel brauchen eventuell manuelle Korrektur
 - Die Übersetzungsqualität hängt vom verwendeten Modell ab
 - Noch keine manuelle Auswahl der Untertitelspur (die beste Spur wird automatisch gewählt)
 
